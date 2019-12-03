@@ -18,6 +18,7 @@ class Layanan extends CI_Controller
         $data['actmk'] = '';
         $data['actor'] = '';
         $data['act'] = '';
+        $data['actb'] = '';
         $data['actl'] = 'active';
         $data['actp'] = '';
         $data['con'] = 'open';

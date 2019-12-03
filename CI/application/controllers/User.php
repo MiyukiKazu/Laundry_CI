@@ -28,6 +28,7 @@ class User extends CI_Controller {
 			$data['actmk'] = '';
 			$data['actor'] = '';
 			$data['act'] = '';
+			$data['actb'] = '';
 			$data['actl'] = '';
 			$data['actp'] = '';
 			$data['con'] = 'close';

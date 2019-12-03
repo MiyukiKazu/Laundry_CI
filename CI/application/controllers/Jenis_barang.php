@@ -19,6 +19,7 @@ class Jenis_barang extends CI_Controller
         $data['actor'] = '';
         $data['act'] = 'active';
         $data['actl'] = '';
+        $data['actb'] = '';
         $data['actp'] = '';
         $data['con'] = 'open';
         $data['jenis'] = $this->Jenis_barang_model->getAll();

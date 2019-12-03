@@ -17,6 +17,7 @@ class Manage_karyawan extends CI_Controller
         $data['actmb'] = '';
         $data['actor'] = '';
         $data['actmk'] = 'active';
+        $data['actb'] = '';
         $data['act'] = '';
         $data['actl'] = '';
         $data['actp'] = '';

@@ -90,6 +90,12 @@ if($this->session->userdata('role_id') != 1){
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
+                <a href="<?= base_url('Tbarang'); ?>" class="nav-link <?php echo $actb; ?>">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Transaksi Barang</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="<?= base_url('Jenis_barang'); ?>" class="nav-link <?php echo $act; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jenis Barang</p>

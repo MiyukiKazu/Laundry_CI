@@ -56,7 +56,7 @@ class Tbarang_model extends CI_Model
     
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ["id_layanan" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_tbarang" => $id])->row();
     }
 
     public function save()

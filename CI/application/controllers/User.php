@@ -9,9 +9,12 @@ class User extends CI_Controller {
 		$this->session->userdata('username')])->row_array();
 		$role = $data['user']['role_id'];
 		if($role == 3){
+			$data['title'] = 'Dashboard pelanggan';
 			$data['con'] = 'close';
 			$data['o'] = '';
-			$this->load->view('pelanggan/p_dashboard',$data);
+			$this->load->view('templates/p_header',$data);
+			$this->load->view('pelanggan/p_dashboard');
+			$this->load->view('templates/p_footer');
 		}elseif($role == 2){
 			$data['title'] = 'Dashboard Karyawan';
 			$data['actor'] = '';

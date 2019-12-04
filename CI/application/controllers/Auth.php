@@ -28,7 +28,14 @@ class Auth extends CI_Controller {
 				'password' =>  password_hash($this->input->post('pass'),PASSWORD_DEFAULT),
 				'role_id' => 3, 
 			];
+			$data1 = [
+				'id_pelanggan' =>  htmlspecialchars($this->input->post('username',true)),
+				'nama_pelanggan' => $this->input->post('nama'),
+				'alamat' => $this->input->post('alamat'),
+				'telefon' => $this->input->post('no_telp'), 
+			];
 			$this->db->insert('user',$data);
+			$this->db->insert('pelanggan',$data1);
 			$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Selamat Registrasi Berhasil , Silahkan login</div>');
 			redirect('auth/login');
 		}

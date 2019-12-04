@@ -35,12 +35,33 @@ function deleteConfirm(url){
               </td>
               <td width="20%">
                 <?php echo $tb->id_jnsbarang ?>
+                <?php echo "- ";
+                $query = $this->db->query("SELECT nama_barang FROM jenis_barang WHERE id_jnsbarang = '$tb->id_jnsbarang' ");
+                foreach ($query->result() as $row)
+                {
+                        echo $row->nama_barang;
+                }
+                ?>
               </td>
               <td width="20%">
                 <?php echo $tb->id_layanan ?>
+                <?php echo "- ";
+                $query = $this->db->query("SELECT nama_layanan FROM layanan WHERE id_layanan = '$tb->id_layanan' ");
+                foreach ($query->result() as $row)
+                {
+                        echo $row->nama_layanan;
+                }
+                ?>
               </td>
               <td width="20%">
                 <?php echo $tb->id_paket?>
+                <?php echo "- ";
+                $query = $this->db->query("SELECT nama_paket FROM paket WHERE id_paket = '$tb->id_paket' ");
+                foreach ($query->result() as $row)
+                {
+                        echo $row->nama_paket;
+                }
+                ?>
               </td>
               <td width="20%">
                 <?php echo $tb->harga?>

@@ -68,7 +68,7 @@ function deleteConfirm(url){
       </tr>
       </tfoot>
     </table>
-
+    <button type="button" class="btn btn-primary"  onclick="window.location='<?php echo site_url("Laporan");?>'">Cetak</button>
   </div>
 </div>
 
@@ -110,15 +110,15 @@ function deleteConfirm(url){
       </div>
       <div class="modal-body">
         <div class="card bg-primary"> 
-         <form role="form" method="POST" action="<?php echo site_url('Proces/edit/'.$jen->id_transaksi) ?>">
+         <form role="form" method="POST" action="<?php echo site_url('Done/edit/'.$jen->id_transaksi) ?>">
             <div class="card-body">
               <div class="form-group">
                 <label for="id_layanan">Status Rincian Cucian </label>
                 <input type="text" class="form-control" id="status_cucian" name="status_cucian" placeholder="Enter ID" value="<?php echo $jen->id_statuscucian; ?>">
               </div>
               <div class="form-group">
-                <label for="id_layanan">Tanggal Terima</label>
-                <input type="text" class="form-control" id="tanggal_terima" name="tanggal_terima" placeholder="Enter ID" value="<?php echo $now; ?>">
+                <label for="id_layanan">Tanggal Selesai</label>
+                <input type="text" class="form-control" id="tgl_selesai" name="tgl_selesai" placeholder="Enter ID" value="<?php echo $now; ?>">
               </div>
               <p>
               Keterangan Status : <br>

@@ -33,13 +33,13 @@ class Done extends CI_Controller
 
     public function edit($id)
     {  
-        
+
         $this->form_validation->set_rules('status_cucian','status_cucian','required');
-        $this->form_validation->set_rules('tanggal_terima','tanggal_terima','required');
+        $this->form_validation->set_rules('tgl_selesai','tgl_selesai','required');
         if ($this->form_validation->run() == true) {
             $data = [
                 'id_statuscucian' =>  $this->input->post('status_cucian'),
-                'tgl_terima' => $this->input->post('tanggal_terima'),
+                'tgl_selesai' => $this->input->post('tgl_selesai'),
             ];
             $this->db->where('id_transaksi', $id);
             $this->db->update('detail_cucian', $data);

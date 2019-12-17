@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/Test/CI/';
+$config['fonts_path']= 'system/font/';
 
 /*
 |--------------------------------------------------------------------------

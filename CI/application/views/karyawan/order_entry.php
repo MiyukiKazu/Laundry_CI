@@ -98,11 +98,10 @@ function deleteConfirm(url){
 
 
 <?php 
-        $modalq = $this->db->query("SELECT * FROM detail_cucian,status_cucian WHERE  detail_cucian.id_statuscucian = status_cucian.id_statuscucian");
-        date_default_timezone_set('Asia/Jakarta'); 
-        $now = date('Y-m-d H:i:s');
-?>
-<?php foreach ($modalq->result() as $jen) :?>
+$modalq = $this->db->query("SELECT * FROM detail_cucian,status_cucian WHERE  detail_cucian.id_statuscucian = status_cucian.id_statuscucian");
+date_default_timezone_set('Asia/Jakarta'); 
+$now = date('Y-m-d H:i:s');
+foreach ($modalq->result() as $jen) :?>
 <div class="modal fade" id="modal-edit<?php echo $jen->id_transaksi;?>">
   <div class="modal-dialog">
     <div class="modal-content bg-primary">

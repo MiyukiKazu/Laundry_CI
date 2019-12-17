@@ -92,19 +92,19 @@ if($data['user']['role_id'] != 2){
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('Jenis_barang'); ?>" class="nav-link <?php echo $oe; ?>">
+                <a href="<?= base_url('Entry'); ?>" class="nav-link <?php echo $oe; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Order Entry</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('Layanan'); ?>" class="nav-link <?php echo $op; ?>">
+                <a href="<?= base_url('Proces'); ?>" class="nav-link <?php echo $op; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>onProccess Order</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('Paket'); ?>" class="nav-link <?php echo $oc; ?>">
+                <a href="<?= base_url('Done'); ?>" class="nav-link <?php echo $oc; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Completed Order</p>
                 </a>
@@ -133,7 +133,7 @@ if($data['user']['role_id'] != 2){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard Karyawan</h1>
+            <h1 class="m-0 text-dark"><?php echo $title; ?></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -147,3 +147,5 @@ if($data['user']['role_id'] != 2){
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">

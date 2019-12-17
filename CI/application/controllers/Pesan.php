@@ -17,7 +17,7 @@ class Pesan extends CI_Controller
     public function index()
     {
         $data['title'] = 'Pesan Sekarang';
-        $data['con'] = 'close';
+        $data['con'] = 'active';
         $data['o'] = '';
         $data['tb'] = $this->Tbarang_model->getAll();
         $data['tbm'] = $this->Tbarang_model->getAll();

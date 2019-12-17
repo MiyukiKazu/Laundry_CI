@@ -67,7 +67,9 @@ function deleteConfirm(url){
       </thead>
       <tbody>
       <?php 
-        $query = $this->db->query("SELECT * FROM detail_cucian,status_cucian WHERE id_pelanggan = 'yuki98' AND detail_cucian.id_statuscucian = status_cucian.id_statuscucian");
+      $u = $this->session->userdata('username');
+      $a = strval($u);
+        $query = $this->db->query("SELECT * FROM detail_cucian,status_cucian WHERE id_pelanggan = '$a' AND detail_cucian.id_statuscucian = status_cucian.id_statuscucian");
             foreach ($query->result() as $row)
             {
                   echo "<tr>";

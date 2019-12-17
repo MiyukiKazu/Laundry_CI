@@ -45,7 +45,10 @@ function deleteConfirm(url){
                     echo "<td>$row->tgl_terima</td>";
                     echo "<td>$row->tgl_selesai</td>";
                     echo "<td>$row->jumlah</td>";
-                    echo "<td>$row->harga</td>";
+                    $harga = $this->db->query("SELECT * FROM tbarang WHERE id_tbarang = '$row->id_tbarang;'");
+                    foreach ($harga->result() as $rowh){
+                    echo '<td>'.$rowh->harga*$row->jumlah.'</td>';
+                    }
                     echo '<td width="5%%">';
                     echo'<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-edit'.$row->id_transaksi.'" >Edit' ;
                     echo'</button>';
@@ -119,6 +122,17 @@ function deleteConfirm(url){
               <div class="form-group">
                 <label for="id_layanan">Tanggal Terima</label>
                 <input type="text" class="form-control" id="tanggal_terima" name="tanggal_terima" placeholder="Enter ID" value="<?php echo $now; ?>">
+              </div>
+              <div class="form-group">
+                <label for="id_layanan">Jumlah</label>
+                <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Enter Jumlah cucian" value="<?= $jen->jumlah; ?>">
+              </div>
+              <div class="form-group">
+                <label for="id_layanan">Harga</label>
+                <input type="text" class="form-control" readonly id="harga" name="harga" placeholder="Enter Jumlah cucian" value="<?php 
+                $hargae = $this->db->query("SELECT * FROM tbarang WHERE id_tbarang = '$jen->id_tbarang;'");
+                    foreach ($hargae->result() as $rowe){  
+                    echo $rowe->harga*$jen->jumlah; }?>">
               </div>
               <p>
               Keterangan Status : <br>

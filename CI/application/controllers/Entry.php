@@ -35,10 +35,14 @@ class Entry extends CI_Controller
     {  
         $this->form_validation->set_rules('status_cucian','status_cucian','required');
         $this->form_validation->set_rules('tanggal_terima','tanggal_terima','required');
+        $this->form_validation->set_rules('jumlah','jumlah','required');
+        $this->form_validation->set_rules('harga','harga','required');
         if ($this->form_validation->run() == true) {
             $data = [
                 'id_statuscucian' =>  $this->input->post('status_cucian'),
                 'tgl_terima' => $this->input->post('tanggal_terima'),
+                'jumlah' => $this->input->post('jumlah'),
+                'harga' => $this->input->post('harga'),
             ];
             $this->db->where('id_transaksi', $id);
             $this->db->update('detail_cucian', $data);

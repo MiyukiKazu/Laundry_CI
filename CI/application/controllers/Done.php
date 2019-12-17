@@ -33,6 +33,7 @@ class Done extends CI_Controller
 
     public function edit($id)
     {  
+        
         $this->form_validation->set_rules('status_cucian','status_cucian','required');
         $this->form_validation->set_rules('tanggal_terima','tanggal_terima','required');
         if ($this->form_validation->run() == true) {
@@ -43,7 +44,7 @@ class Done extends CI_Controller
             $this->db->where('id_transaksi', $id);
             $this->db->update('detail_cucian', $data);
             $this->session->set_flashdata('success','<div class="alert alert-success" role="alert"> Data Berhasil diUpdate <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
-            redirect('Entry');
+            redirect('Done');
         }
     }
 

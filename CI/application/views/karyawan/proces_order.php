@@ -116,10 +116,6 @@ function deleteConfirm(url){
                 <label for="id_layanan">Status Rincian Cucian </label>
                 <input type="text" class="form-control" id="status_cucian" name="status_cucian" placeholder="Enter ID" value="<?php echo $jen->id_statuscucian; ?>">
               </div>
-              <div class="form-group">
-                <label for="id_layanan">Tanggal Terima</label>
-                <input type="text" class="form-control" id="tanggal_terima" name="tanggal_terima" placeholder="Enter ID" value="<?php echo $now; ?>">
-              </div>
               <p>
               Keterangan Status : <br>
               1. Waiting <br>
